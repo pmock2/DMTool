@@ -149,7 +149,7 @@ class DmTool {
           <div class="home_menu_item" id="encounters">
             <div class="home_menu_item_text">Encounters</div>
           </div>
-          <button id="save_and_exit">Savet</button>
+          <button id="save_and_exit">Save</button>
         </div>
         ''';
     listeners.forEach((item) {
