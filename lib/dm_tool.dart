@@ -149,7 +149,7 @@ class DmTool {
           <div class="home_menu_item" id="encounters">
             <div class="home_menu_item_text">Encounters</div>
           </div>
-          <button id="save_and_exit">Save and Exit</button>
+          <button id="save_and_exit">Savet</button>
         </div>
         ''';
     listeners.forEach((item) {
@@ -164,7 +164,6 @@ class DmTool {
       var json = JSON.encode(dmProfile.profile);
       String test = json.toString();
       downloadFileToClient("dmprofile.json", test);
-      window.close();
     })
     );
 
@@ -181,18 +180,25 @@ class DmTool {
     String menu =
     '''
         <div id="dice_roller_menu" class="container_section">
-        <div class="main_title menu_title" id="dice_roller_screen_title">Dice Roller</div>
-        <div>Insert your roll using standard notation. Example: 2d8+8</div>
-        <input class="main_input" type="text" placeholder="roll" id="dice_roll">
-        <div id="roll_result"></div>
-        <div id="roll_message">Please enter a valid roll</div>
-        <button id="roll">Roll</button>
-        <button id="save_roll">Save Roll</button>
+          <div class="main_title menu_title" id="dice_roller_screen_title">Dice Roller</div>
+          <div>Insert your roll using standard notation. Example: 2d8+8</div>
+          <input class="main_input" type="text" placeholder="roll" id="dice_roll">
+          <button class="dice_roll_button" id="roll">Roll</button>
+          <button class="dice_roll_button" id="save_roll">Save Roll</button>
+          <div id="roll_content">
+            <div id="roll_result"></div>
+            <div id="roll_message">Please enter a valid roll</div>
+          </div>
+          <div id="saved_rolls_container">
+
+          </div>
         </div>
         ''';
 
     container.setInnerHtml(menu);
     homeButton.style.display = 'block';
+
+    populateCustomRolls();
 
     getElement('#roll').onClick.listen((e) {
       getDiceRoll();
@@ -217,6 +223,9 @@ class DmTool {
           <div class="info_item popup_box_item">Roll:
             <input class="popup_input_item"  type="text" id="entered_roll" value="$roll"> 
           </div>
+          <div class="info_item popup_box_item">Color:
+            <input class="popup_input_item" type="color" id="color">
+          </div>
           <button id="submit_new_dice_roll" class="popup_box_submit_button">Submit</button>
           <button id="cancel_dice_roll" class="popup_box_cancel_button">Cancel</button>
         </div>
@@ -229,21 +238,51 @@ class DmTool {
     getElement('#submit_new_dice_roll').onClick.listen((e) {
       String name = (getElement('#name') as InputElement).value;
       String roll = (getElement('#entered_roll') as InputElement).value;
+      String color = (getElement('#color') as InputElement).value;
+      print(color);
 
-      if (roll.isNotEmpty && name.isNotEmpty) {
-        DiceRoll diceRoll = new DiceRoll(name, roll);
-        diceRoll.addRollToProfile(dmProfile.profile);
+      if (roll.isNotEmpty && name.isNotEmpty && color.isNotEmpty) {
+        DiceRoll diceRoll = new DiceRoll(name, roll, color);
+        diceRoll.addRollToProfile(dmProfile);
+        removePopUp('new_dice_roll_menu');
+        populateCustomRolls();
       }
-      removePopUp('new_dice_roll_menu');
     });
 
     getElement('#cancel_dice_roll').onClick.listen((e) {
       removePopUp('new_dice_roll_menu');
+      populateCustomRolls();
+    });
+  }
+
+  void populateCustomRolls() {
+    Element container = getElement('#saved_rolls_container');
+    container.children.clear();
+
+    (dmProfile.profile['dice_rolls'] as Map).forEach((rollName, value) {
+      if (value is Map) {
+        ButtonElement button = new ButtonElement();
+        button.innerHtml = rollName;
+        button.style.background = value['color'];
+        button.classes.add('custom_roll_button');
+
+        button.onClick.listen((e) {
+          getDiceRoll(value['roll']);
+        });
+
+        container.append(button);
+      }
     });
   }
 
   void getDiceRoll([String savedRoll]) {
-    String roll = (getElement('#dice_roll') as InputElement).value;
+    String roll;
+    if (savedRoll == null) {
+      roll = (getElement('#dice_roll') as InputElement).value;
+    }
+    else {
+      roll = savedRoll;
+    }
     Element message =  getElement('#roll_message');
     Element resultMessage = getElement('#roll_result');
     bool badState = false;
@@ -388,7 +427,7 @@ class DmTool {
               buildString.clear();
               getNext = false;
             }
-            else {
+            else if (!isNumber(nextChar)) {
               badState = true;
             }
           }
@@ -484,7 +523,7 @@ class DmTool {
       (e.target as InputElement).readOnly = false;
       (e.target as InputElement).select();
       window.onClick.listen((f) {
-        if (f.target != e.target) {
+        if (f.target != e.target && getElement("#party_level_from_profile") != null) {
           (e.target as InputElement).readOnly = true;
           dmProfile.profile['party_level'] = (getElement("#party_level_from_profile") as InputElement).value;
           dmProfile.profile['party_level'] = dmProfile.profile['party_level'] == '' ? '0' : dmProfile.profile['party_level'];

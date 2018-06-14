@@ -1,17 +1,23 @@
 part of dm_tool;
 
 class DiceRoll {
-  String name, roll;
+  String name, roll, color;
 
-  DiceRoll(this.name, this.roll);
+  DmProfile dmProfile;
 
-  void addRollToProfile(var profile) {
-    if (profile is Map) {
-      var diceRolls = profile['dice_rolls'];
-      if (diceRolls is Map) {
-        diceRolls[name] = roll;
+  DiceRoll(this.name, this.roll, this.color);
+
+  void addRollToProfile(DmProfile profile) {
+    Map diceRoll = new Map();
+    diceRoll = {
+      name : {
+        'name' : name,
+        'roll' : roll,
+        'color': color
       }
-    }
+    };
+
+    profile.addToGroup('dice_rolls', diceRoll);
   }
 }
 

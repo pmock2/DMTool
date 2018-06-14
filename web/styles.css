@@ -297,11 +297,41 @@ button:hover {
 /*------------------------- END PARTY MEMBER */
 
 /*------------------------- DICE ROLLER */
+
+.dice_roll_button {
+    display: inline-block;
+    width: 70px;
+    font-size: 19px;
+    padding: 15px;
+    font-weight: 500;
+}
+
+#save_roll {
+    width: 114px;
+}
+
+#roll_content {
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 3px;
+}
+
 #roll_message {
     margin-bottom: 10px;
     display: none;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 #roll_result {
     font-size: 46px;
+}
+
+.custom_roll_button {
+    border: 2px solid black;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 10px;
+    display: inline-block;
+    width: 225px;
 }
