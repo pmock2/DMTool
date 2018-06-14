@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("../lib/fonts/Roboto-Light.ttf");
+}
+
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(#FFFFFF, #8D8F9A);
+}
+
+#home_button {
+    font-size: 28px;position: fixed;
+    left: 35px;
+    top: 35px;
+    padding: 5px;
+    border: 2px solid black;
+    background: #EFEFEF;
+    width: 150px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+#home_button:hover {
+    background: #d01a15;
+    color: white;
+    border-color: #d01a15;
+}
+
+.main_title {
+    font-family: Roboto, Comic Sans MS, sans-serif;
+    font-size: 104px;
+    font-weight: 100;
+    padding-top: 18%;
+}
+
+.title {
+    display: block;
+    font-size: 40px;
+}
+
+button {
+    background-color: rgba(255,255,255,0.1);
+    border: 3px solid #f42117;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    font-family: Roboto, Comic Sans, sans-serif;
+    font-weight: 300;
+    padding: 15px 20px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    width: 280px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.main_menu_button {
+    font-size: 42px;
+    margin: 20px auto;
+    width: 560px;
+}
+
+button:hover {
+    /*background-color: #f44336; !* Green *!*/
+    background: linear-gradient(#f42723, #d01a15);
+    color: white;
+}
+
+#new_dm_section {
+    padding-top: 100px;
+}
+
+#submit_new_dm {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.container_section {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
+
+.main_input {
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    margin: 10px 10px 20px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    font-size: 28px;
+    background: linear-gradient(#ffffff, #e2e2e2);;
+}
+
+#current_party_level {
+    width: 75px;
+}
+
+.menu_title {
+    padding: 50px 50px 15px 50px;
+    text-align: center;
+}
+
+/* ---------------------- START MAIN MENU */
+
+.home_menu_item {
+    padding: 40px;
+    font-size: 40px;
+    margin: 20px 66px;
+    width: 270px;
+    height: 160px;
+    display: -webkit-inline-box;
+    display: inline-grid;
+    background: rgba(255,255,255,0.1);
+    border: solid 3px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    vertical-align:middle;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.home_menu_item_text {
+    margin: auto;
+}
+
+#dice_roller {
+    border-color: #f4161c;
+}
+
+#dice_roller:hover  {
+    background: linear-gradient(#f42723, #d01a15);
+    color: white;
+}
+
+#party_info {
+    border-color: #3434ff;
+}
+
+#party_info:hover  {
+    background: linear-gradient(#1d41ff, #3434ff);
+    color: white;
+}
+
+#monsters {
+    border-color: #06a017;
+}
+
+#monsters:hover  {
+    background: linear-gradient(#2aab36, #007912);
+    color: white;
+}
+
+#encounters {
+    border-color: #79797b;
+}
+
+#encounters:hover  {
+    background: linear-gradient(#a3a2a4, #79797b);
+    color: white;
+}
+
+#save_and_exit {
+    margin-top: 30px;
+    font-size: 28px;
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    padding: 5px;
+    width: 195px;
+    background-color: #EFEFEF;
+    border-radius: 2px;
+}
+
+/* ---------------------- START MAIN MENU */
+
+.info_item {
+    font-size: 32px;
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+}
+
+.editable_info_value {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    font-size: 32px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.editable_info_value:hover  {
+    border: 3px solid black;
+    cursor: text;
+}
+
+#party_level_from_profile {
+    width: 35px;
+}
+
+/* ----------------------START POP UP BOX */
+
+.popup_box {
+    width: 40%;
+    position: fixed;
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background: linear-gradient(white, #bdbdbd);
+    padding: 10px;
+}
+
+.popup_box_title {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 5px 30px 5px;
+}
+
+.popup_box_item {
+    margin: 10px 0;
+}
+
+.popup_input_item {
+    width: 70%;
+    float: right;
+    height: 45px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    font-size: 32px;
+}
+
+.popup_box_submit_button {
+    margin-top: 45px;
+}
+
+.popup_box_cancel_button {
+    margin-top: 10px;
+}
+
+/*------------------------- END POP UP BOX */
+
+
+/*------------------------- START PARTY MEMBER */
+.party_member_container {
+    background: rgba(0,0,0,0.1);
+    margin: 10px auto;
+    padding: 5px;
+    width: 60%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.party_member_title {
+    font-size: 28px;
+}
+
+.party_member_item {
+    margin: 5px 0;
+    display: inline-table;
+    font-size: 23px;
+}
+
+.party_item_value {
+    float: right;
+    font-size: 23px;
+    width: 135px;
+}
+/*------------------------- END PARTY MEMBER */
+
+/*------------------------- DICE ROLLER */
+#roll_message {
+    margin-bottom: 10px;
+    display: none;
+}
+
+#roll_result {
+    font-size: 46px;
+}
