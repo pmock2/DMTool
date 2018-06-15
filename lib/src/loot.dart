@@ -46,7 +46,9 @@ class Loot {
     if (isPickPocket) {
       int d100 = roll();
 
-      if (d100 < 25)
+      if (d100 < 25) {
+
+      }
 
     }
     else {
