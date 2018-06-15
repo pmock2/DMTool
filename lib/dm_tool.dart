@@ -9,6 +9,7 @@ import 'dart:math';
 part 'src/dm_profile.dart';
 part 'src/party_member.dart';
 part 'src/dice_roll.dart';
+part 'src/loot.dart';
 
 class DmTool {
   DivElement container;
@@ -143,8 +144,8 @@ class DmTool {
           <div class="home_menu_item" id="party_info">
             <div class="home_menu_item_text">Party Info</div>
           </div>
-          <div class="home_menu_item" id="monsters">
-            <div class="home_menu_item_text">Monster Index</div>
+          <div class="home_menu_item" id="loot">
+            <div class="home_menu_item_text">Loot Gen</div>
           </div>
           <div class="home_menu_item" id="encounters">
             <div class="home_menu_item_text">Encounters</div>
@@ -169,11 +170,23 @@ class DmTool {
 
     listeners.add(getElement('#party_info').onClick.listen((e) {
       goToPartyInfo();
-    }));
+    })
+    );
 
     listeners.add(getElement('#dice_roller').onClick.listen((e) {
       goToDiceRoller();
-    }));
+    })
+    );
+
+    listeners.add(getElement('#loot').onClick.listen((e) {
+      goToLootGen();
+    })
+    );
+
+  }
+
+  void goToLootGen() {
+
   }
 
   void goToDiceRoller() {

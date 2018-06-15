@@ -125,6 +125,26 @@ button:hover {
     text-align: center;
 }
 
+.info_item {
+    font-size: 32px;
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+}
+
+.editable_info_value {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    font-size: 32px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.editable_info_value:hover  {
+    border: 3px solid black;
+    cursor: text;
+}
+
 /* ---------------------- START MAIN MENU */
 
 .home_menu_item {
@@ -150,11 +170,11 @@ button:hover {
 }
 
 #dice_roller {
-    border-color: #f4161c;
+    border-color: #d01a15;
 }
 
 #dice_roller:hover  {
-    background: linear-gradient(#f42723, #d01a15);
+    background: linear-gradient(#fe2723, #d01a15);
     color: white;
 }
 
@@ -163,16 +183,16 @@ button:hover {
 }
 
 #party_info:hover  {
-    background: linear-gradient(#1d41ff, #3434ff);
+    background: linear-gradient(#1b51ff, #3434ff);
     color: white;
 }
 
-#monsters {
-    border-color: #06a017;
+#loot {
+    border-color: darkgoldenrod;
 }
 
-#monsters:hover  {
-    background: linear-gradient(#2aab36, #007912);
+#loot:hover  {
+    background: linear-gradient(#daa50b, darkgoldenrod);
     color: white;
 }
 
@@ -197,31 +217,15 @@ button:hover {
     border-radius: 2px;
 }
 
-/* ---------------------- START MAIN MENU */
+/* ---------------------- END MAIN MENU */
 
-.info_item {
-    font-size: 32px;
-    padding: 10px;
-    margin: 0 10px 10px 10px;
-}
-
-.editable_info_value {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.3);
-    border: 3px solid rgba(0, 0, 0, 0.4);
-    font-size: 32px;
-    padding: 10px 20px;
-    border-radius: 6px;
-}
-
-.editable_info_value:hover  {
-    border: 3px solid black;
-    cursor: text;
-}
+/* --------------------- START PARTY MENU */
 
 #party_level_from_profile {
     width: 35px;
 }
+
+/* --------------------- END PARTY MENU */
 
 /* ----------------------START POP UP BOX */
 
@@ -296,7 +300,7 @@ button:hover {
 }
 /*------------------------- END PARTY MEMBER */
 
-/*------------------------- DICE ROLLER */
+/*------------------------- START DICE ROLLER */
 
 .dice_roll_button {
     display: inline-block;
@@ -335,3 +339,8 @@ button:hover {
     display: inline-block;
     width: 225px;
 }
+
+/*------------------------- END DICE ROLLER */
+
+/*------------------------- START LOOT GEN */
+
