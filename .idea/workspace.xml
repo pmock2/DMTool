@@ -37,17 +37,17 @@
       <file leaf-file-name="dm_profile.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/dm_profile.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dm_tool.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dm_tool.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="355" column="57" lean-forward="true" selection-start-line="355" selection-start-column="57" selection-end-line="355" selection-end-column="57" />
+            <state relative-caret-position="310">
+              <caret line="356" column="49" lean-forward="true" selection-start-line="356" selection-start-column="49" selection-end-line="356" selection-end-column="49" />
               <folding>
                 <element signature="e#104#131#0" expanded="true" />
               </folding>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loot.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loot.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/loot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+            <state relative-caret-position="34">
+              <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -217,7 +217,7 @@
       <workItem from="1528469734822" duration="43000" />
       <workItem from="1528502054783" duration="19047000" />
       <workItem from="1528990476860" duration="595000" />
-      <workItem from="1529003469553" duration="10399000" />
+      <workItem from="1529003469553" duration="16787000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented saved dice rolls, fixed bug in party info screen">
       <created>1529008110119</created>
@@ -230,7 +230,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30084000" />
+    <option name="totallyTimeSpent" value="36472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1696" height="1026" extended-state="6" />
@@ -240,14 +240,14 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32882884" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Pub Serve" />
-      <window_info active="true" anchor="bottom" id="Dart Analysis" order="8" visible="true" weight="0.32995495" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.32995495" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24909529" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39864865" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.39864865" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -271,7 +271,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -406,25 +406,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/dm_profile.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="355" column="57" lean-forward="true" selection-start-line="355" selection-start-column="57" selection-end-line="355" selection-end-column="57" />
-          <folding>
-            <element signature="e#104#131#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/loot.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        <state relative-caret-position="34">
+          <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="356" column="49" lean-forward="true" selection-start-line="356" selection-start-column="49" selection-end-line="356" selection-end-column="49" />
+          <folding>
+            <element signature="e#104#131#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
