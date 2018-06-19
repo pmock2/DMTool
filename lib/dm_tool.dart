@@ -186,6 +186,94 @@ class DmTool {
   }
 
   void goToLootGen() {
+    List<StreamSubscription> currentListener = new List();
+
+    String menu =
+        '''
+        <div id="loot_menu" class="container_section">
+        <div class="main_title menu_title" id="loot_screen_title">Loot Gen</div>
+          <div class="info_item">Type:
+          
+              <ul class="loot_type_picker">
+                <li id="pickpocket">
+                  <input type="radio" id="f-option" name="selector">
+                  <label for="f-option">Pickpocket</label>
+                  
+                  <div class="check"></div>
+                </li>
+                
+                <li id="encounter">
+                  <input type="radio" id="s-option" name="selector">
+                  <label for="s-option">Encounter</label>
+                  
+                  <div class="check"><div class="inside"></div></div>
+                </li>
+              </ul>
+              <div id="extra_options"></div>
+              <div id="loot_result"></div>
+          </div>
+        </div>
+        ''';
+
+    container.setInnerHtml(menu);
+    homeButton.style.display = 'block';
+
+    listeners.add(getElement('#pickpocket').onClick.listen((e) {
+      currentListener.forEach((l) {
+        l.cancel();
+      });
+      currentListener.clear();
+
+      String pickpocketMenu =
+          '''
+          <div class="info_item">Skill Check:
+            <input class="main_input" type="number" placeholder="check" id="skill_check">
+            <button id="roll_loot">Roll</button>
+          </div>
+          ''';
+
+      getElement('#extra_options').setInnerHtml(pickpocketMenu);
+
+      currentListener.add(getElement('#roll_loot').onClick.listen((e) {
+        int skillCheck = int.parse((getElement('#skill_check') as InputElement).value);
+        Loot loot = new Loot(int.parse(dmProfile.profile['party_level']), check: skillCheck, isPickPocket: true);
+        getElement('#loot_result').text = loot.result;
+      }));
+    }));
+
+    listeners.add(getElement('#encounter').onClick.listen((e) {
+      currentListener.forEach((l) {
+        l.cancel();
+      });
+      currentListener.clear();
+
+      String encounterMenu =
+      '''
+          <div class="info_item">Difficulty:
+            <input class="main_input" type="number" placeholder="1-5" id="difficulty">
+          </div>
+          <div id="info_message"></div>
+          <button id="roll_loot">Roll</button>
+          ''';
+
+      getElement('#extra_options').setInnerHtml(encounterMenu);
+
+      currentListener.add(getElement('#roll_loot').onClick.listen((e) {
+        InputElement difficultyElem = getElement('#difficulty');
+
+        if (int.parse(difficultyElem.value) > 0 && int.parse(difficultyElem.value) < 6) {
+          getElement('#info_message').text = '';
+          int difficulty = int.parse(difficultyElem.value);
+          Loot loot = new Loot(int.parse(dmProfile.profile['party_level']), difficulty: difficulty);
+          getElement('#loot_result').text = loot.result;
+        }
+        else {
+          getElement('#info_message').text = 'Difficulty must be between 1 and 5';
+        }
+      }));
+
+    }));
+
 
   }
 
