@@ -1,0 +1,3 @@
+part of dm_tool;
+
+enum Rarity {VERY_COMMON, COMMON, UNCOMMON, RARE, VERY_RARE, LEGENDARY}

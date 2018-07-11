@@ -15,21 +15,7 @@ class Loot {
 
   bool includeItem, isPickPocket;
 
-  Random r = new Random();
-
-  Loot(this.partyLevel, {this.check = 0, this.includeItem = false, this.isPickPocket = false, this.difficulty = 1,}) {
-    getLoot();
-  }
-
-  int roll([int max = 100]) {
-    int min = 1;
-    if (max == min) {
-      return 1;
-    }
-    else {
-      return min + r.nextInt(max - min);
-    }
-  }
+  Loot(this.partyLevel, {this.check = 0, this.includeItem = false, this.isPickPocket = false, this.difficulty = 1,});
 
   void getLoot() {
     if (isPickPocket) {
@@ -56,41 +42,41 @@ class Loot {
       case 1:
         d100 = roll();
         if (d100 > 24 && d100 < 50) {
-          totalLoot.writeln(getGem(1));
+          totalLoot.writeln(getGem(Rarity.VERY_COMMON));
         }
         else if (d100 > 49 && d100 < 75) {
-          totalLoot.writeln(getGem(1));
+          totalLoot.writeln(getGem(Rarity.VERY_COMMON));
         }
         else if (d100 > 74 && d100 < 90 ) {
-          totalLoot.writeln(getGem(1));
+          totalLoot.writeln(getGem(Rarity.VERY_COMMON));
         }
         else if (d100 > 89 && d100 < 100) {
-          totalLoot.writeln(getGem(2));
+          totalLoot.writeln(getGem(Rarity.COMMON));
         }
         else if (d100 == 100) {
-          totalLoot.writeln(getGem(3));
+          totalLoot.writeln(getGem(Rarity.UNCOMMON));
         }
         break;
       case 2:
         for (int i = 0; i < roll(halfPartyLevel); i++) {
           d100 = roll();
           if (d100 < 25) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 24 && d100 < 50) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 49 && d100 < 75) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 74 && d100 < 90 ) {
-            totalLoot.writeln(getGem(2));
+            totalLoot.writeln(getGem(Rarity.COMMON));
           }
           else if (d100 > 89 && d100 < 100) {
-            totalLoot.writeln(getGem(3));
+            totalLoot.writeln(getGem(Rarity.UNCOMMON));
           }
           else if (d100 == 100) {
-            totalLoot.writeln(getGem(4));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
         }
         break;
@@ -98,22 +84,22 @@ class Loot {
         for (int i = 0; i < roll(halfPartyLevel); i++) {
           d100 = roll();
           if (d100 < 25) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 24 && d100 < 50) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 49 && d100 < 75) {
-            totalLoot.writeln(getGem(2));
+            totalLoot.writeln(getGem(Rarity.COMMON));
           }
           else if (d100 > 74 && d100 < 90 ) {
-            totalLoot.writeln(getGem(3));
+            totalLoot.writeln(getGem(Rarity.UNCOMMON));
           }
           else if (d100 > 89 && d100 < 100) {
-            totalLoot.writeln(getGem(4));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
           else if (d100 == 100) {
-            totalLoot.writeln(getGem(5));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
         }
         break;
@@ -121,22 +107,22 @@ class Loot {
         for (int i = 0; i < roll(halfPartyLevel); i++) {
           d100 = roll();
           if (d100 < 25) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 24 && d100 < 50) {
-            totalLoot.writeln(getGem(2));
+            totalLoot.writeln(getGem(Rarity.COMMON));
           }
           else if (d100 > 49 && d100 < 75) {
-            totalLoot.writeln(getGem(3));
+            totalLoot.writeln(getGem(Rarity.UNCOMMON));
           }
           else if (d100 > 74 && d100 < 90 ) {
-            totalLoot.writeln(getGem(4));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
           else if (d100 > 89 && d100 < 100) {
-            totalLoot.writeln(getGem(5));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
           else if (d100 == 100) {
-            totalLoot.writeln(getGem(6));
+            totalLoot.writeln(getGem(Rarity.LEGENDARY));
           }
         }
         break;
@@ -144,22 +130,22 @@ class Loot {
         for (int i = 0; i < roll(halfPartyLevel); i++) {
           d100 = roll();
           if (d100 < 25) {
-            totalLoot.writeln(getGem(1));
+            totalLoot.writeln(getGem(Rarity.VERY_COMMON));
           }
           else if (d100 > 24 && d100 < 50) {
-            totalLoot.writeln(getGem(2));
+            totalLoot.writeln(getGem(Rarity.COMMON));
           }
           else if (d100 > 49 && d100 < 75) {
-            totalLoot.writeln(getGem(3));
+            totalLoot.writeln(getGem(Rarity.UNCOMMON));
           }
           else if (d100 > 74 && d100 < 90 ) {
-            totalLoot.writeln(getGem(4));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
           else if (d100 > 89 && d100 < 100) {
-            totalLoot.writeln(getGem(5));
+            totalLoot.writeln(getGem(Rarity.RARE));
           }
           else if (d100 == 100) {
-            totalLoot.writeln(getGem(6));
+            totalLoot.writeln(getGem(Rarity.LEGENDARY));
           }
         }
         break;
@@ -252,38 +238,58 @@ class Loot {
       very rare   - 8000gp  - 3%  (97-99)
       legendary   - 20000gp - 1%  (100)
    */
-  String getGem(int rarity) {
+  String getGem(Rarity rarity) {
     int gold;
     List gems;
     int gemIndex = roll(4) - 1;
 
     switch (rarity) {
-      case 1:
+      case Rarity.VERY_COMMON:
         gold = ((roll(4) + roll(4) + roll(4) + roll(4)) * 2);
         gems = ['azurite', 'blue quartz', 'lapis lazuli', 'obsidian'];
         break;
-      case 2:
+      case Rarity.COMMON:
         gold = (((roll(4)) + roll(4)) * 10 * 2);
         gems = ['bloodstone', 'jasper', 'moonstone', 'obsidian'];
         break;
-      case 3:
+      case Rarity.UNCOMMON:
         gold = ((roll(4) + roll(4) + roll(4) + roll(4)) * 10 * 3.5).floor();
         gems = ['amethyst', 'amber', 'coral', 'jade'];
         break;
-      case 4:
+      case Rarity.RARE:
         gold = (((roll(4)) + roll(4)) * 100 * 2);
         gems =
         ['aquamarine', 'alexandrite', 'black pearl', 'godlen yellow topaz'];
         break;
-      case 5:
+      case Rarity.VERY_RARE:
         gold = ((roll(4) + roll(4) + roll(4) + roll(4)) * 100) * 8;
         gems = ['emerald', 'fire opal', 'blue sapphire', 'star ruby'];
         break;
-      case 6:
+      case Rarity.LEGENDARY:
         gold = (((roll(4)) + roll(4)) * 1000 * 20);
         gems = ['large diamond', 'clear white pearl', 'meteor shard', 'clear emerald'];
     }
 
     return gems[gemIndex] + '(' + gold.toString() + ' gold)';
+  }
+
+  String getWeapon(Rarity rarity) {
+    Weapon weapon = new Weapon(rarity);
+    return weapon.getWeapon();
+  }
+
+  String getArmor() {
+    String loot;
+    return loot;
+  }
+
+  String getStaffAndWand() {
+    String loot;
+    return loot;
+  }
+
+  String getWondrousItem() {
+    String loot;
+    return loot;
   }
 }

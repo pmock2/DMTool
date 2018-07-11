@@ -10,6 +10,9 @@ part 'src/dm_profile.dart';
 part 'src/party_member.dart';
 part 'src/dice_roll.dart';
 part 'src/loot.dart';
+part 'src/items/weapons.dart';
+part 'src/roll.dart';
+part 'src/enumerations.dart';
 
 class DmTool {
   DivElement container;
@@ -265,6 +268,7 @@ class DmTool {
           getElement('#info_message').text = '';
           int difficulty = int.parse(difficultyElem.value);
           Loot loot = new Loot(int.parse(dmProfile.profile['party_level']), difficulty: difficulty);
+          loot.getLoot();
           getElement('#loot_result').text = loot.result;
         }
         else {
