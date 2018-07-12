@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49933dc9-1f60-4bb9-829e-e00ab9e4c8a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/enumerations.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/items/weapons.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/roll.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/items/gems.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/items/special_weapons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dm_tool.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dm_tool.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/items/weapons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/items/weapons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/loot.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/loot.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/roll.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/roll.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,38 +23,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dm_profile.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/src/dm_profile.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="loot.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/loot.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="948">
-              <caret line="277" column="30" selection-start-line="277" selection-start-column="30" selection-end-line="277" selection-end-column="30" />
+            <state relative-caret-position="328">
+              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weapons.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="weapons.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/items/weapons.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="566" column="9" selection-start-line="566" selection-start-column="9" selection-end-line="566" selection-end-column="9" />
+            <state relative-caret-position="149">
+              <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dm_tool.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dm_tool.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="243">
+              <caret line="273" column="63" selection-start-line="273" selection-start-column="63" selection-end-line="273" selection-end-column="63" />
               <folding>
                 <element signature="e#104#131#0" expanded="true" />
               </folding>
@@ -60,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="party_member.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/src/party_member.dart">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" selection-start-line="41" selection-end-line="54" selection-end-column="3" />
+            <state relative-caret-position="490">
+              <caret line="539" column="20" selection-start-line="539" selection-start-column="20" selection-end-line="539" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -80,14 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
-      <find>yes</find>
-      <find>gotoDi</find>
-      <find>Save</find>
-      <find>Savet</find>
-      <find>monster</find>
-      <find>int min</find>
-      <find>int max</find>
       <find>.check</find>
       <find>toroll</find>
       <find>toRoll</find>
@@ -96,7 +81,33 @@
       <find>roll</find>
       <find>bypass</find>
       <find>criti</find>
+      <find>Ghost Touch</find>
+      <find>Keen</find>
+      <find>blood</find>
+      <find>ki fo</find>
+      <find>vici</find>
+      <find>getWeapon(Rarity.LEGENDARY);</find>
+      <find>waraxxe</find>
+      <find>Frost</find>
+      <find>Mighty Cleaving</find>
+      <find>Cleaving</find>
+      <find>Something</find>
+      <find>Spell</find>
+      <find>Spell Storing</find>
+      <find>no wea</find>
+      <find>Merciful</find>
+      <find>loot_result</find>
+      <find>'''</find>
+      <find>writeln(</find>
+      <find>writeln('</find>
+      <find>writeln</find>
+      <find>set</find>
+      <find>loot loot</find>
     </findStrings>
+    <replaceStrings>
+      <replace>totalLoot.writeln(getWeapon(Rarity.LEGENDARY));</replace>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,13 +119,15 @@
         <option value="$PROJECT_DIR$/lib/src/party_member.dart" />
         <option value="$PROJECT_DIR$/lib/src/dice_roll.dart" />
         <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/web/styles.css" />
         <option value="$PROJECT_DIR$/lib/src/Items/weapons.dart" />
-        <option value="$PROJECT_DIR$/lib/src/roll.dart" />
         <option value="$PROJECT_DIR$/lib/src/enumerations.dart" />
+        <option value="$PROJECT_DIR$/lib/src/items/special_weapons.dart" />
+        <option value="$PROJECT_DIR$/lib/src/items/gems.dart" />
+        <option value="$PROJECT_DIR$/lib/src/roll.dart" />
+        <option value="$PROJECT_DIR$/web/styles.css" />
         <option value="$PROJECT_DIR$/lib/src/loot.dart" />
-        <option value="$PROJECT_DIR$/lib/dm_tool.dart" />
         <option value="$PROJECT_DIR$/lib/src/items/weapons.dart" />
+        <option value="$PROJECT_DIR$/lib/dm_tool.dart" />
       </list>
     </option>
   </component>
@@ -158,6 +171,13 @@
               <item name="DMTool" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMTool" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tools" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +240,7 @@
       <workItem from="1528502054783" duration="19047000" />
       <workItem from="1528990476860" duration="595000" />
       <workItem from="1529003469553" duration="32536000" />
-      <workItem from="1531317657983" duration="17280000" />
+      <workItem from="1531317657983" duration="37027000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented saved dice rolls, fixed bug in party info screen">
       <created>1529008110119</created>
@@ -233,29 +253,29 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69501000" />
+    <option name="totallyTimeSpent" value="89248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24909529" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32995495" />
+      <window_info anchor="bottom" id="Pub Serve" order="0" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.32995495" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24909529" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32995495" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.36824325" />
+      <window_info anchor="bottom" id="Debug" order="5" visible="true" weight="0.32545045" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Pub Serve" order="0" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Dart Dev Server" order="1" />
@@ -274,7 +294,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="31" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -438,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8993">
-          <caret line="529" column="25" selection-start-line="529" selection-start-column="25" selection-end-line="529" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -459,27 +472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/roll.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/enumerations.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#104#131#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,17 +486,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/loot.dart">
+    <entry file="file://$PROJECT_DIR$/lib/src/items/gems.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="277" column="30" selection-start-line="277" selection-start-column="30" selection-end-line="277" selection-end-column="30" />
+        <state relative-caret-position="30">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/items/special_weapons.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/roll.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="539" column="20" selection-start-line="539" selection-start-column="20" selection-end-line="539" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/items/weapons.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="566" column="9" selection-start-line="566" selection-start-column="9" selection-end-line="566" selection-end-column="9" />
+        <state relative-caret-position="149">
+          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/loot.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dm_tool.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="273" column="63" selection-start-line="273" selection-start-column="63" selection-end-line="273" selection-end-column="63" />
+          <folding>
+            <element signature="e#104#131#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

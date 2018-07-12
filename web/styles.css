@@ -534,3 +534,8 @@ by the way it is so weird when you look at your code a couple of years after you
 #extra_options {
     margin-top: 100px;
 }
+
+#loot_result {
+    font-size: 21px;
+    text-align: left;
+}

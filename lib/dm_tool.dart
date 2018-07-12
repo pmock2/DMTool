@@ -13,6 +13,8 @@ part 'src/loot.dart';
 part 'src/items/weapons.dart';
 part 'src/roll.dart';
 part 'src/enumerations.dart';
+part 'src/items/special_weapons.dart';
+part 'src/items/gems.dart';
 
 class DmTool {
   DivElement container;
@@ -240,7 +242,7 @@ class DmTool {
       currentListener.add(getElement('#roll_loot').onClick.listen((e) {
         int skillCheck = int.parse((getElement('#skill_check') as InputElement).value);
         Loot loot = new Loot(int.parse(dmProfile.profile['party_level']), check: skillCheck, isPickPocket: true);
-        getElement('#loot_result').text = loot.result;
+        getElement('#loot_result').setInnerHtml(loot.result);
       }));
     }));
 
@@ -269,7 +271,7 @@ class DmTool {
           int difficulty = int.parse(difficultyElem.value);
           Loot loot = new Loot(int.parse(dmProfile.profile['party_level']), difficulty: difficulty);
           loot.getLoot();
-          getElement('#loot_result').text = loot.result;
+          getElement('#loot_result').setInnerHtml(loot.result);
         }
         else {
           getElement('#info_message').text = 'Difficulty must be between 1 and 5';
@@ -862,5 +864,9 @@ class DmTool {
       return null;
     }
   }
+}
 
+class NullTreeSanitizer implements NodeTreeSanitizer {
+  @override
+  void sanitizeTree(Node node) {}
 }
