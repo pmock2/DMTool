@@ -201,16 +201,20 @@ class DmTool {
           
               <ul class="loot_type_picker">
                 <li id="pickpocket">
-                  <input type="radio" id="f-option" name="selector">
-                  <label for="f-option">Pickpocket</label>
-                  
+                  <input type="radio" id="p_pocket" name="selector">
+                  <label for="p_pocket">Pickpocket</label>
                   <div class="check"></div>
                 </li>
                 
                 <li id="encounter">
-                  <input type="radio" id="s-option" name="selector">
-                  <label for="s-option">Encounter</label>
-                  
+                  <input type="radio" id="encounter_opt" name="selector">
+                  <label for="encounter_opt">Encounter</label>
+                  <div class="check"><div class="inside"></div></div>
+                </li>
+                
+                <li id="weapon">
+                  <input type="radio" id="weapon_opt" name="selector">
+                  <label for="weapon_opt">Weapon</label>
                   <div class="check"><div class="inside"></div></div>
                 </li>
               </ul>
@@ -280,7 +284,60 @@ class DmTool {
 
     }));
 
+    listeners.add(getElement('#weapon').onClick.listen((e) {
+      currentListener.forEach((l) {
+        l.cancel();
+      });
+      currentListener.clear();
 
+      String encounterMenu =
+      '''
+          <div class="info_item">Rarity:
+            <input class="main_input" type="number" placeholder="1-6" id="rarity">
+          </div>
+          <div id="info_message"></div>
+          <button id="roll_loot">Roll</button>
+          ''';
+
+      getElement('#extra_options').setInnerHtml(encounterMenu);
+
+      currentListener.add(getElement('#roll_loot').onClick.listen((e) {
+        InputElement difficultyElem = getElement('#rarity');
+
+        if (int.parse(difficultyElem.value) > 0 && int.parse(difficultyElem.value) < 7) {
+          getElement('#info_message').text = '';
+          int difficulty = int.parse(difficultyElem.value);
+          Rarity rarity;
+          switch (difficulty) {
+            case 1:
+              rarity = Rarity.VERY_COMMON;
+              break;
+            case 2:
+              rarity = Rarity.COMMON;
+              break;
+            case 3:
+              rarity = Rarity.UNCOMMON;
+              break;
+            case 4:
+              rarity = Rarity.RARE;
+              break;
+            case 5:
+              rarity = Rarity.VERY_RARE;
+              break;
+            case 6:
+              rarity = Rarity.LEGENDARY;
+              break;
+          }
+          Weapon loot = new Weapon(rarity);
+          loot.assignWeapon();
+          getElement('#loot_result').setInnerHtml(loot.weapon);
+        }
+        else {
+          getElement('#info_message').text = 'Difficulty must be between 1 and 5';
+        }
+      }));
+
+    }));
   }
 
   void goToDiceRoller() {
