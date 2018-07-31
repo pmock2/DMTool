@@ -21,15 +21,16 @@ class WandOrStaff {
 
   WandOrStaff(this.rarity) {
     getWandOrStaff();
-    buildTables();
   }
 
   void getWandOrStaff() {
     int d100 = roll();
     if (d100 > 50) {
+      buildTables(buildStaff: true);
       getStaff();
     }
     else {
+      buildTables(buildWand: true);
       getWand();
     }
   }
@@ -42,7 +43,7 @@ class WandOrStaff {
 
   }
 
-  void buildTables() {
+  void buildTables({bool buildWand = false, bool buildStaff = false}) {
     void buildWands() {
       void buildLowWands() {
 
@@ -53,10 +54,27 @@ class WandOrStaff {
       void buildHighWands() {
 
       }
-
-      buildLowWands();
-      buildMidWands();
-      buildHighWands();
+      
+      switch (rarity) {
+        case Rarity.VERY_COMMON:
+          buildLowWands();
+          break;
+        case Rarity.COMMON:
+          buildLowWands();
+          break;
+        case Rarity.UNCOMMON:
+          buildMidWands();
+          break;
+        case Rarity.RARE:
+          buildMidWands();
+          break;
+        case Rarity.VERY_RARE:
+          buildHighWands();
+          break;
+        case Rarity.LEGENDARY:
+          buildHighWands();
+          break;
+      }
     }
 
     void buildStaffs() {
@@ -70,13 +88,33 @@ class WandOrStaff {
 
       }
 
-      buildLowStaffs();
-      buildMidStaffs();
-      buildHighStaffs();
+      switch (rarity) {
+        case Rarity.VERY_COMMON:
+          buildLowStaffs();
+          break;
+        case Rarity.COMMON:
+          buildLowStaffs();
+          break;
+        case Rarity.UNCOMMON:
+          buildMidStaffs();
+          break;
+        case Rarity.RARE:
+          buildMidStaffs();
+          break;
+        case Rarity.VERY_RARE:
+          buildHighStaffs();
+          break;
+        case Rarity.LEGENDARY:
+          buildHighStaffs();
+          break;
+      }
     }
-
-    buildWands();
-    buildStaffs();
+    if (buildStaff) {
+      buildStaffs();
+    }
+    else if (buildWand) {
+      buildWands();
+    }
   }
 
   void storeObjects(Rarity rarity, String description, int min, int max, {bool staff = false, bool wand = false}) {

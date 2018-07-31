@@ -30,9 +30,11 @@ class ArmorOrShield {
   void getArmorOrShield() {
     int d100 = roll();
     if (d100 > 50) {
+      buildTables(buildArmor: true);
       getArmor();
     }
     else {
+      buildTables(buildShield: true);
       getShield();
     }
   }
@@ -45,7 +47,7 @@ class ArmorOrShield {
 
   }
 
-  void buildTables() {
+  void buildTables({bool buildShield = false, bool buildArmor = false}) {
     void buildShields() {
       void buildLowShields() {
 
@@ -57,29 +59,66 @@ class ArmorOrShield {
 
       }
 
-      buildLowShields();
-      buildMidShields();
-      buildHighShields();
+      switch (rarity) {
+        case Rarity.VERY_COMMON:
+          buildLowShields();
+          break;
+        case Rarity.COMMON:
+          buildLowShields();
+          break;
+        case Rarity.UNCOMMON:
+          buildMidShields();
+          break;
+        case Rarity.RARE:
+          buildMidShields();
+          break;
+        case Rarity.VERY_RARE:
+          buildHighShields();
+          break;
+        case Rarity.LEGENDARY:
+          buildHighShields();
+          break;
+      }
     }
 
-    void buildArmor() {
-      void buildLowArmor() {
+    void buildArmors() {
+      void buildLowArmors() {
 
       }
-      void buildMidArmor() {
+      void buildMidArmors() {
 
       }
-      void buildHighArmor() {
+      void buildHighArmors() {
 
       }
 
-      buildLowArmor();
-      buildMidArmor();
-      buildHighArmor();
+      switch (rarity) {
+        case Rarity.VERY_COMMON:
+          buildLowArmors();
+          break;
+        case Rarity.COMMON:
+          buildLowArmors();
+          break;
+        case Rarity.UNCOMMON:
+          buildMidArmors();
+          break;
+        case Rarity.RARE:
+          buildMidArmors();
+          break;
+        case Rarity.VERY_RARE:
+          buildHighArmors();
+          break;
+        case Rarity.LEGENDARY:
+          buildHighArmors();
+          break;
+      }
     }
-
-    buildShields();
-    buildArmor();
+    if (buildArmor) {
+      buildArmors();
+    }
+    else if (buildShield) {
+      buildShields();
+    }
   }
 
   void storeObjects(Rarity rarity, String description, int min, int max, {bool armor = false, bool shield = false}) {
