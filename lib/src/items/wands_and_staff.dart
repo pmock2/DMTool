@@ -61,7 +61,7 @@ class WandOrStaff {
 
     void buildStaffs() {
       void buildLowStaffs() {
-        
+
       }
       void buildMidStaffs() {
 
