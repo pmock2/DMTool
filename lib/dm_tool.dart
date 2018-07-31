@@ -15,6 +15,7 @@ part 'src/roll.dart';
 part 'src/enumerations.dart';
 part 'src/items/special_weapons.dart';
 part 'src/items/gems.dart';
+part 'src/items/wands_and_staff.dart';
 
 class DmTool {
   DivElement container;
