@@ -17,6 +17,7 @@ part 'src/items/special_weapons.dart';
 part 'src/items/gems.dart';
 part 'src/items/wands_and_staff.dart';
 part 'src/items/armor_and_shields.dart';
+part 'src/encounter.dart';
 
 class DmTool {
   DivElement container;
@@ -48,7 +49,8 @@ class DmTool {
 
     listeners.add(getElement('#existing_profile_button').onClick.listen((e) {
       loadDmMenu();
-    }));
+    })
+    );
 
   }
 
@@ -137,7 +139,6 @@ class DmTool {
     homeButton.onClick.listen((e) {
       goToMainMenu();
     });
-
   }
 
   void goToMainMenu() {
@@ -190,6 +191,16 @@ class DmTool {
     })
     );
 
+    listeners.add(getElement('#encounters').onClick.listen((e) {
+      goToEncounters();
+    }));
+  }
+
+  void goToEncounters() {
+    Encounter encounter = new Encounter(container, homeButton);
+    encounter.onCloseEncounter.listen((e) {
+      goToMainMenu();
+    });
   }
 
   void goToLootGen() {

@@ -492,9 +492,6 @@ input[type=radio]:checked ~ label{
 }
 
 
-/* Styles for alert...
-by the way it is so weird when you look at your code a couple of years after you wrote it XD */
-
 .alert {
     box-sizing: border-box;
     background-color: #0DFF92;
@@ -539,4 +536,37 @@ by the way it is so weird when you look at your code a couple of years after you
 #loot_result {
     font-size: 21px;
     text-align: left;
+}
+
+/*------------------------- END LOOT GEN */
+
+/*------------------------- START ENCOUNTERS */
+
+#encounter_screen_title {
+    font-size: 72px;
+}
+
+.encounter_adder {
+    text-align: center;
+}
+
+#participant_name {
+
+}
+
+#initiative {
+    width: 50px;
+}
+
+#add {
+    display: inline-block;
+    width: 100px;
+}
+
+#begin {
+
+}
+
+#players_container {
+
 }
